@@ -176,3 +176,29 @@ quiz-page {
 }
 
 /* Results page styling */
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+
+    .quiz-container {
+      padding: 1.5rem;
+      margin: 1rem;
+      border-radius: 10px;
+    }
+  
+    .intro-page h1 {
+      font-size: 2rem;
+    }
+  
+    .intro-page h2 {
+      font-size: 1.2rem;
+    }
+  
+    .question-text {
+      font-size: 1.3rem;
+    }
+    
+    .result-type {
+      font-size: 2.5rem;
+    }
+}
