@@ -1,0 +1,87 @@
+.results-page {
+    text-align: center;
+    padding: 2rem 1rem;
+
+    h1 {
+        color: var(--mala-red);
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.result-type {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: var(--mala-dark-red);
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 0px rgba(242, 153, 74, 0.2);
+
+    h2 {
+        font-size: 1.5rem;
+        color: var(--mala-brown);
+        margin-bottom: 2rem;
+    }
+}
+
+.mala-profile {
+    background-color: var(--mala-white);
+    border: 2px solid #ffe8e0;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(242, 153, 74, 0.1);
+
+    h3 {
+        color: var(--mala-dark-red);
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.spice-meter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.spice-level {
+    display: flex;
+    gap: 5px;
+}
+
+.pepper {
+    opacity: 0.3;
+    filter: grayscale(1);
+    transition: all 0.3s ease;
+
+    .active {
+        opacity: 1;
+        filter: grayscale(0);
+    };
+}
+
+.restart-button {
+    background-color: var(--mala-orange);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+
+    &:hover {
+        background-color: var(--mala-brown);
+        transform: translateY(-2px);
+    }
+}
+
+@media (max-width: 600px) {
+    .result-type {
+        font-size: 2.5rem;
+    }
+}
