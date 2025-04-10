@@ -218,4 +218,4 @@ const personalityTypes = {
 };
 
 // Exporting the questions and personality types
-export { questions, personalityTypes };
+// export { questions, personalityTypes };

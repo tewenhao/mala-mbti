@@ -1,6 +1,6 @@
 // main entry point for quiz application
-import { MalaQuiz } from './quiz.js';
-import { QuizUI } from './ui.js';
+// import { MalaQuiz } from './quiz.js';
+// import { QuizUI } from './ui.js';
 
 // wait for DOM to FULLY load
 document.addEventListener('DOMContentLoaded', () => {

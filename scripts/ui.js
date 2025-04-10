@@ -111,7 +111,7 @@ class QuizUI {
 }
 
 // import questions for type information
-import { questions } from "./data.js";
+// import { questions } from "./data.js";
 
 // export ui controller
-export { QuizUI };
+// export { QuizUI };
