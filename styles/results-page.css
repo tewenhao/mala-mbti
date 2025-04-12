@@ -57,7 +57,7 @@
     filter: grayscale(1);
     transition: all 0.3s ease;
 
-    .active {
+    &.active {
         opacity: 1;
         filter: grayscale(0);
     };
