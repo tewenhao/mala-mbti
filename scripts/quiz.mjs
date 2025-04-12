@@ -1,4 +1,4 @@
-// import { questions, personalityTypes } from './data.js';
+import { questions, personalityTypes } from './data.mjs';
 
 // main quiz logic class
 class MalaQuiz {
@@ -81,4 +81,4 @@ class MalaQuiz {
 }
 
 // export the quiz class
-// export { MalaQuiz };
+export { MalaQuiz };

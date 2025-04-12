@@ -7,7 +7,7 @@ class QuizUI {
         // DOM elements
         this.introPage = document.getElementsByClassName("intro-page")[0];
         this.quizPage = document.getElementsByClassName("quiz-page")[0];
-        this.resultPage = document.getElementsByClassName("result-page")[0];
+        this.resultsPage = document.getElementsByClassName("results-page")[0];
         this.questionText = document.getElementsByClassName("question-text")[0];
         this.optionsContainer = document.getElementsByClassName("options")[0];
         this.progressBar = document.getElementsByClassName("progress")[0];
@@ -23,21 +23,21 @@ class QuizUI {
     init() {
         // Hide all pages initially
         this.quizPage.style.display = "none";
-        this.resultPage.style.display = "none";
+        this.resultsPage.style.display = "none";
     }
 
     // Show the intro page
     showIntro() {
         this.introPage.style.display = "block";
         this.quizPage.style.display = "none";
-        this.resultPage.style.display = "none";
+        this.resultsPage.style.display = "none";
     }
 
     // start the quiz and show the first question
     startQuiz() {
         this.introPage.style.display = "none";
         this.quizPage.style.display = "block";
-        this.resultPage.style.display = "none";
+        this.resultsPage.style.display = "none";
         this.loadQuestion();
     }
 
@@ -82,7 +82,7 @@ class QuizUI {
     // display quiz results
     showResults() {
         this.quizPage.style.display = "none";
-        this.resultPage.style.display = "block";
+        this.resultsPage.style.display = "block";
 
         // Get result and update UI
         const result = this.quiz.getResult();
@@ -111,7 +111,7 @@ class QuizUI {
 }
 
 // import questions for type information
-// import { questions } from "./data.js";
+import { questions } from "./data.mjs";
 
 // export ui controller
-// export { QuizUI };
+export { QuizUI };
