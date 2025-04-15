@@ -372,3 +372,10 @@ const MBTICharacters = {
         incompatibleTypes: ["ISFP", "ESFP"]
     }
 }
+
+// helper function to get image for each type
+function getTypeImage(type) {
+    return MBTICharacters[type]?.image || "❓";
+}
+
+export { MBTICharacters, getTypeImage }
