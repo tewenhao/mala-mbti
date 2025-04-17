@@ -9,58 +9,165 @@
     }
 }
 
-.result-type {
-    font-size: 3.5rem;
-    font-weight: bold;
-    color: var(--mala-dark-red);
-    margin-bottom: 0.5rem;
-    text-shadow: 2px 2px 0px rgba(242, 153, 74, 0.2);
+/* character card styling */
+.character-card {
+    background-color: var(--mala-card-bg);
+    border-radius: 20px;
+    padding: 0;
+    max-width: 380px;
+    margin: 0 auto 2rem;
+    box-shadow: 0 8px 24px rgba(150, 75, 0, 0.15);
+    overflow: hidden;
+    position: relative;
+}
+
+.card-header {
+    background-color: var(--mala-yellow);
+    padding: 0.8rem;
+    position: relative;
 
     h2 {
-        font-size: 1.5rem;
-        color: var(--mala-brown);
-        margin-bottom: 2rem;
+        color: #222;
+        font-size: 1.8rem;
+        margin: 0;
+        font-weight: bold;
+    }
+
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-style: solid;
+    }
+
+    &::before {
+        left: -20px;
+        top: 0;
+        border-width: 0 0 50px 20px;
+        border-color: transparent transparent var(--mala-yellow) transparent;
+    }
+
+    &::after {
+        right: -20px;
+        top: 0;
+        border-width: 50px 20px 0 0;
+        border-color: var(--mala-yellow) transparent transparent transparent;
     }
 }
 
-.mala-profile {
-    background-color: var(--mala-white);
-    border: 2px solid #ffe8e0;
+.character-image {
+    padding: 1.5rem 0;
+    max-width: 140px;
+    margin: 0 auto;
+    position: relative;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.population-text {
+    color: #333;
+    margin: 1rem;
+}
+
+.trait-box {
+    background-color: var(--mala-yellow);
     border-radius: 15px;
-    padding: 2rem;
-    box-shadow: 0 5px 15px rgba(242, 153, 74, 0.1);
+    margin: 0.5rem 1.5rem;
+    padding: 0.5rem;
+    color: #333;
+    font-weight: 500;
+}
 
-    h3 {
-        color: var(--mala-dark-red);
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-        margin-bottom: 1.5rem;
+.quote-box {
+    background-color: var(--mala-yellow);
+    border-radius: 15px;
+    margin: 0.5rem 1.5rem;
+    padding: 0.5rem;
+    color: #333;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.stats-box {
+    background-color: rgba(255, 238, 153, 0.5);
+    border: 2px solid var(--mala-yellow);
+    border-radius: 15px;
+    margin: 1rem 1.5rem;
+    padding: 0.8rem;
+}
+
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5rem;
+}
+
+.stat-name {
+    text-align: left;
+    font-weight: 500;
+}
+
+.stat-value {
+    display: flex;
+}
+
+/* element will be added in by javascript */
+.star {
+    color: var(--mala-star-color);
+    margin-left: 2px;
+
+    &.filled {
+        opacity: 1;
+    }
+
+    &.empty {
+        opacity: 0.3;
     }
 }
 
-.spice-meter {
+.compatibility-section {
+    margin: 1.5rem;
+}
+
+.compatibility-title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.compatibility-items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.compatibility-item {
+    width: 22%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+}
+
+.card-footer {
+    background-color: var(--mala-yellow);
+    padding: 0.7rem;
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-}
-
-.spice-level {
-    display: flex;
-    gap: 5px;
-}
-
-.pepper {
-    opacity: 0.3;
-    filter: grayscale(1);
-    transition: all 0.3s ease;
-
-    &.active {
-        opacity: 1;
-        filter: grayscale(0);
-    };
 }
 
 .restart-button {
@@ -81,7 +188,7 @@
 }
 
 @media (max-width: 600px) {
-    .result-type {
-        font-size: 2.5rem;
+    .character-card {
+        max-width: 95%;
     }
 }

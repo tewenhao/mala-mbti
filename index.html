@@ -44,35 +44,77 @@
 
         
         <div class="results-page" style="display: none;">
-            <!-- for this section i want to make one png/image per result
-             like how fruitcard odessey does it so like a character sheet
-             ish then ill design sprites and stuff for each one -->
+            <h1>Your Mala Spice Profile</h1>
 
-             <h1>Your Mala Personality</h1>
-             <div class="result-type">XXXX</div>
-             <h2 class="result-title">Your Flavour Profile</h2>
-
-             <div class="mala-profile">
-                <h3>Spice Description</h3>
-                <p class="result-description">Description goes here</p>
-
-                <h3>Your Spice Level</h3>
-                <div class="spice-meter">
-                    <span>Mild</span>
-                    <div class="spice-level">
-                        <span class="pepper">🌶️</span>
-                        <span class="pepper">🌶️</span>
-                        <span class="pepper">🌶️</span>
-                        <span class="pepper">🌶️</span>
-                        <span class="pepper">🌶️</span>
-                    </div>
-                    <span>Extra Hot</span>
+            <!-- Character Card -->
+            <div class="character-card">
+                <!-- header with personality type -->
+                <div class="card-header">
+                    <h2 class="result-type">XXXX</h2>
                 </div>
 
-                <h3>Signature Mala Ingredient</h3>
-                <p class="result-ingredient">Ingredient goes here</p>
-             </div>
+                <!-- image of character -->
+                <div class="character-image">
+                    <img src="images/character-placeholder.png" alt="Character Image" class="character-image">
+                </div>
 
+                <!-- Population -->
+                <p class="population-text">This ingredient is X% of all ingredients in the world!</p>
+
+                <!-- trait boxes -->
+                <div class="trait-box trait1"></div>
+                <div class="trait-box trait2"></div>
+
+                <!-- quote -->
+                <div class="quote quote-box"></div>
+
+                <!-- stats -->
+                <div class="stats-box">
+                    <div class="stat-row">
+                        <span class="stat-name">Spiciness</span>
+                        <div class="stat-value spiciness-stat"></div>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-name">Traditionality</span>
+                        <div class="stat-value traditionality-stat"></div>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-name">Adaptability</span>
+                        <div class="stat-value adaptability-stat"></div>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-name">Spiciness</span>
+                        <div class="stat-value spiciness-stat"></div>
+                    </div>
+                </div>
+
+                <!-- mbti compatibility -->
+                <div class="compatibility-section">
+                    <div class="compatibility-title">
+                        <span>Most compatible</span>
+                        <span>Least compatible</span>
+                    </div>
+                    <div class="compatibility-items">
+                        <div class="compatibility-item compatible1">
+                            <img src="" alt="Compatible type 1">
+                        </div>
+                        <div class="compatibility-item compatible2">
+                            <img src="" alt="Compatible type 2">
+                        </div>
+                        <div class="compatibility-item incompatible1">
+                            <img src="" alt="incompatible type 1">
+                        </div>
+                        <div class="compatibility-item incompatible2">
+                            <img src="" alt="incompatible type 2">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- footer -->
+                <div class="card-footer">
+                    MalaCard MBTIs - Discover your spice personality!
+                </div>
+             </div>
              <button class="restart-button">Take Quiz Again!</button>
         </div>
     </div>

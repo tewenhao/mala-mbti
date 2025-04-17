@@ -6,9 +6,13 @@
     --mala-brown: #964b00;
     --mala-orange: #f2994a;
     --mala-yellow: #f2c94c;
+    --mala-light-yellow: #fff8d9;
     --mala-black: #222222;
     --mala-white: #f9f9f9;
     --mala-light-bg: #fff8f8;
+    --mala-card-bg: #f8efe2;
+    --mala-card-border: #e0d5c9;
+    --mala-star-color: goldenrod;
 }
 
 body {

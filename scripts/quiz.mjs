@@ -1,4 +1,5 @@
-import { questions, personalityTypes } from './data.mjs';
+import { questions } from "./questions.mjs";
+import { MBTICharacters } from "./characters.mjs";
 
 // main quiz logic class
 class MalaQuiz {
@@ -60,7 +61,7 @@ class MalaQuiz {
         const mbtiType = this.calculateMBTI();
         return {
             type: mbtiType,
-            ...personalityTypes[mbtiType]
+            ...MBTICharacters[mbtiType]
         };
     }
 
