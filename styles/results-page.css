@@ -35,7 +35,7 @@
 }
 
 .card-header {
-    background-color: var(--mala-spicy-gradient);
+    background: var(--mala-spicy-gradient);
     padding: 0.8rem;
     position: relative;
     box-shadow: 0 4px 8px rgba(150, 75, 0, 0.1);
@@ -269,7 +269,7 @@
 }
 
 .card-footer {
-    background-color: var(--mala-hot-gradient);
+    background: var(--mala-hot-gradient);
     padding: 0.7rem;
     margin-top: 1.5rem;
     font-size: 0.8rem;
