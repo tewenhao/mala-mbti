@@ -6,6 +6,7 @@
         color: var(--mala-red);
         font-size: 2rem;
         margin-bottom: 1.5rem;
+        text-shadow: 1px 1px 2px rgba(150, 75, 0, 0.2);
     }
 }
 
@@ -19,40 +20,48 @@
     box-shadow: 0 8px 24px rgba(150, 75, 0, 0.15);
     overflow: hidden;
     position: relative;
+
+    &::before {
+        content: "辣";
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        font-size: 100px;
+        color: var(--mala-red);
+        opacity: 0.05;
+        z-index: 0;
+        transform: rotate(15deg);
+    }
 }
 
 .card-header {
-    background-color: var(--mala-yellow);
+    background-color: var(--mala-spicy-gradient);
     padding: 0.8rem;
     position: relative;
+    box-shadow: 0 4px 8px rgba(150, 75, 0, 0.1);
 
     h2 {
-        color: #222;
+        color: white;
         font-size: 1.8rem;
         margin: 0;
         font-weight: bold;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
     }
 
     &::before, &::after {
-        content: "";
+        content: "🌶️";
         position: absolute;
-        width: 0;
-        height: 0;
-        border-style: solid;
+        font-size: 1.2rem;
+        top: 50%;
+        transform: translateY(-50%);
     }
 
     &::before {
-        left: -20px;
-        top: 0;
-        border-width: 0 0 50px 20px;
-        border-color: transparent transparent var(--mala-yellow) transparent;
+        left: 10px;
     }
 
     &::after {
-        right: -20px;
-        top: 0;
-        border-width: 50px 20px 0 0;
-        border-color: var(--mala-yellow) transparent transparent transparent;
+        right: 10px;
     }
 }
 
@@ -61,16 +70,20 @@
     max-width: 140px;
     margin: 0 auto;
     position: relative;
+    animation: spicy-pulse 3s infinite ease-in-out;
 
     img {
         width: 100%;
         height: auto;
+        filter: drop-shadow(0 4px 8px rgba(150, 75, 0, 0.2));
     }
 }
 
 .population-text {
-    color: #333;
+    color: var(--mala-brown);
     margin: 1rem;
+    font-weight: 500;
+    font-style: italic;
 }
 
 .trait-box {
@@ -78,38 +91,105 @@
     border-radius: 15px;
     margin: 0.5rem 1.5rem;
     padding: 0.5rem;
-    color: #333;
+    color: var(--mala-brown);
     font-weight: 500;
+    box-shadow: 0 2px 5px rgba(150, 75, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: "•";
+        color: var(--mala-red);
+        font-size: 1.5rem;
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 0.5;
+    }
 }
 
 .quote-box {
-    background-color: var(--mala-yellow);
+    background-color: var(--mala-light-yellow);
     border-radius: 15px;
     margin: 0.5rem 1.5rem;
-    padding: 0.5rem;
-    color: #333;
+    padding: 1rem;
+    color: var(--mala-brown);
     font-style: italic;
     font-weight: 500;
+    box-shadow: 0 2px 5px rgba(150, 75, 0, 0.1);
+    position: relative;
+    border-left: 4px solid var(--mala-red);
+
+    &::before, &::after {
+        content: "\"";
+        font-size: 2rem;
+        position: absolute;
+        color: rgba(150, 75, 0, 0.2);
+    }
+
+    &::before {
+        top: 0;
+        left: 5px;
+    }
+
+    &::after {
+        content: "\"";
+        bottom: -15px;
+        right: 5px;
+    }
 }
 
 .stats-box {
-    background-color: rgba(255, 238, 153, 0.5);
-    border: 2px solid var(--mala-yellow);
+    background-color: var(--mala-white);
+    border: 2px solid var(--mala-card-border);
     border-radius: 15px;
     margin: 1rem 1.5rem;
     padding: 0.8rem;
+    position: relative;
+
+    &::before {
+        content: "SPICE PROFILE";
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--mala-yellow);
+        padding: 2px 10px;
+        border-radius: 10px;
+        font-size: 0.7rem;
+        font-weight: bold;
+        color: var(--mala-brown);
+    }
 }
 
 .stat-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px dashed var(--mala-card-border);
+
+    &:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
 }
 
 .stat-name {
     text-align: left;
     font-weight: 500;
+    color: var(--mala-brown);
+    display: flex;
+    align-items: center;
+
+    &::before {
+        content: "🌶️";
+        margin-right: 5px;
+        font-size: 0.8em;
+    }
 }
 
 .stat-value {
@@ -120,6 +200,7 @@
 .star {
     color: var(--mala-star-color);
     margin-left: 2px;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
 
     &.filled {
         opacity: 1;
@@ -132,14 +213,34 @@
 
 .compatibility-section {
     margin: 1.5rem;
+    background-color: var(--mala-white);
+    border-radius: 15px;
+    padding: 1rem 0.5rem;
+    box-shadow: 0 2px 5px rgba(150, 75, 0, 0.1);
+    border: 1px solid var(--mala-card-border);
 }
 
 .compatibility-title {
     display: flex;
     justify-content: space-between;
     font-size: 0.9rem;
-    color: #666;
-    margin-bottom: 0.5rem;
+    color: var(--mala-brown);
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+
+    span {
+        position: relative;
+
+        &:first-child::before {
+            content: "😋";
+            margin-right: 4px;
+        }
+
+        &:last-child::before {
+            content: "😬";
+            margin-right: 4px;
+        }
+    }
 }
 
 .compatibility-items {
@@ -149,10 +250,16 @@
 
 .compatibility-item {
     width: 22%;
-    background-color: #fff;
+    background-color: var(--mala-light-yellow);
     border-radius: 10px;
     padding: 0.5rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(150, 75, 0, 0.1);
+    transition: all 0.3 ease;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(150, 75, 0, 0.2);
+    }
 
     img {
         width: 100%;
@@ -162,12 +269,16 @@
 }
 
 .card-footer {
-    background-color: var(--mala-yellow);
+    background-color: var(--mala-hot-gradient);
     padding: 0.7rem;
     margin-top: 1.5rem;
     font-size: 0.8rem;
     display: flex;
     justify-content: center;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .restart-button {
@@ -179,11 +290,20 @@
     font-size: 1.2rem;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 4px 10px rgba(150, 75, 0, 0.2);
+    font-weight: bold;
+    letter-spacing: 0.5px;
 
     &:hover {
         background-color: var(--mala-brown);
         transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(150, 75, 0, 0.3);
+    }
+
+    &::before {
+        content: "🔥";
+        margin-right: 8px;
     }
 }
 

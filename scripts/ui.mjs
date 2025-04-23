@@ -101,7 +101,7 @@ class QuizUI {
     generateStarRating(rating) {
         let stars = "";
         for (let i = 0; i < 5; i++) {
-            stars += `<span class="star ${i < rating ? "filled" : "empty"}">&#9733;</span>`;
+            stars += `<span class="star ${i < rating ? "filled" : "empty"}">🌶️</span>`;
         }
         return stars;
     }
@@ -124,7 +124,7 @@ class QuizUI {
         this.characterImage.alt = character.title;
 
         // set population text
-        this.populationText.textContent = `This ingredient ix ${character.population} of all ingredients in the world!`;
+        this.populationText.textContent = `This ingredient is ${character.population} of all ingredients in the world!`;
 
         // set traits
         this.trait1.textContent = character.traits[0];
@@ -143,16 +143,16 @@ class QuizUI {
         const compatibles = character.compatibleTypes;
         const incompatibles = character.incompatibleTypes;
 
-        this.compatible1.src = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"><text x="50%" y="50%" font-size="20" text-anchor="middle" dominant-baseline="middle">${getTypeEmoji(compatibles[0])}</text></svg>`;
+        this.compatible1.src = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"><text x="50%" y="50%" font-size="20" text-anchor="middle" dominant-baseline="middle">${getTypeImage(compatibles[0])}</text></svg>`;
         this.compatible1.alt = compatibles[0];
         
-        this.compatible2.src = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"><text x="50%" y="50%" font-size="20" text-anchor="middle" dominant-baseline="middle">${getTypeEmoji(compatibles[1])}</text></svg>`;
+        this.compatible2.src = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"><text x="50%" y="50%" font-size="20" text-anchor="middle" dominant-baseline="middle">${getTypeImage(compatibles[1])}</text></svg>`;
         this.compatible2.alt = compatibles[1];
         
-        this.incompatible1.src = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"><text x="50%" y="50%" font-size="20" text-anchor="middle" dominant-baseline="middle">${getTypeEmoji(incompatibles[0])}</text></svg>`;
+        this.incompatible1.src = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"><text x="50%" y="50%" font-size="20" text-anchor="middle" dominant-baseline="middle">${getTypeImage(incompatibles[0])}</text></svg>`;
         this.incompatible1.alt = incompatibles[0];
         
-        this.incompatible2.src = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"><text x="50%" y="50%" font-size="20" text-anchor="middle" dominant-baseline="middle">${getTypeEmoji(incompatibles[1])}</text></svg>`;
+        this.incompatible2.src = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"><text x="50%" y="50%" font-size="20" text-anchor="middle" dominant-baseline="middle">${getTypeImage(incompatibles[1])}</text></svg>`;
         this.incompatible2.alt = incompatibles[1];
 
     }

@@ -13,6 +13,10 @@
     --mala-card-bg: #f8efe2;
     --mala-card-border: #e0d5c9;
     --mala-star-color: goldenrod;
+
+    /* varying gradient values to account for different browsers */
+    --mala-spicy-gradient: linear-gradient(111.4deg, rgba(238,113,113,1) 1%, rgba(246,215,148,1) 58%);
+    --mala-hot-gradient: linear-gradient(90deg, hsla(24, 100%, 83%, 1) 0%, hsla(341, 91%, 68%, 1) 100%);
 }
 
 body {
@@ -37,6 +41,12 @@ body {
     0% { transform: translateY(0px); }
     50% { transform: translateY(-10px); }
     100% { transform: translateY(0px); }
+}
+
+@keyframes spicy-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); filter: brightness(1.1); }
+    100% { transform: scale(1); }
 }
 
 /* Responsive Adjustments */
