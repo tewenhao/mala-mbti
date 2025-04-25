@@ -18,7 +18,7 @@ class QuizUI {
         
         // character card elements
         this.resultType = document.getElementsByClassName("result-type")[0];
-        this.characterImage = document.getElementsByClassName("character-image")[0];
+        this.characterImage = document.getElementsByClassName("character-image")[1];    // the <img> one is the second one
         this.populationText = document.getElementsByClassName("population-text")[0];
         this.trait1 = document.getElementsByClassName("trait1")[0];
         this.trait2 = document.getElementsByClassName("trait2")[0];
@@ -118,9 +118,8 @@ class QuizUI {
         // set character data
         this.resultType.textContent = mbtiType + " - " + character.title;
 
-        // this.characterImage.src = getTypeImage(mbtiType);
-        // Use emoji as placeholder for now - in a real app, you'd use actual images
-        this.characterImage.src = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><text x="50%" y="50%" font-size="70" text-anchor="middle" dominant-baseline="middle">${character.image}</text></svg>`;
+        // set character image
+        this.characterImage.src = character.image;
         this.characterImage.alt = character.title;
 
         // set population text
@@ -143,16 +142,16 @@ class QuizUI {
         const compatibles = character.compatibleTypes;
         const incompatibles = character.incompatibleTypes;
 
-        this.compatible1.src = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"><text x="50%" y="50%" font-size="20" text-anchor="middle" dominant-baseline="middle">${getTypeImage(compatibles[0])}</text></svg>`;
+        this.compatible1.src = getTypeImage(compatibles[0]);
         this.compatible1.alt = compatibles[0];
         
-        this.compatible2.src = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"><text x="50%" y="50%" font-size="20" text-anchor="middle" dominant-baseline="middle">${getTypeImage(compatibles[1])}</text></svg>`;
+        this.compatible2.src = getTypeImage(compatibles[1]);
         this.compatible2.alt = compatibles[1];
         
-        this.incompatible1.src = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"><text x="50%" y="50%" font-size="20" text-anchor="middle" dominant-baseline="middle">${getTypeImage(incompatibles[0])}</text></svg>`;
+        this.incompatible1.src = getTypeImage(incompatibles[0]);
         this.incompatible1.alt = incompatibles[0];
         
-        this.incompatible2.src = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"><text x="50%" y="50%" font-size="20" text-anchor="middle" dominant-baseline="middle">${getTypeImage(incompatibles[1])}</text></svg>`;
+        this.incompatible2.src = getTypeImage(incompatibles[1]);
         this.incompatible2.alt = incompatibles[1];
 
     }

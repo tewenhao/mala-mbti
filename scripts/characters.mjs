@@ -76,7 +76,7 @@ const MBTICharacters = {
         ],
         quote: "If it ain’t broke, don’t fix it.",
         population: "11–14%",
-        image: "🪷",
+        image: "assets/mala-lotus-root.png",
         stats: {
             spiciness: 2,
             complexity: 2,
@@ -95,7 +95,7 @@ const MBTICharacters = {
         ],
         quote: "I’ve got you—soak it all in.",
         population: "9–14%",
-        image: "🧈",
+        image: "assets/mala-tofu-puff.png",
         stats: {
             spiciness: 1,
             complexity: 3,
@@ -114,7 +114,7 @@ const MBTICharacters = {
         ],
         quote: "Soft-spoken, spice-soaked.",
         population: "1–3%",
-        image: "🍄",
+        image: "assets/mala-enoki-mushroom.png",
         stats: {
             spiciness: 2,
             complexity: 5,
@@ -133,7 +133,7 @@ const MBTICharacters = {
         ],
         quote: "Calculated crunch.",
         population: "2–4%",
-        image: "🖤",
+        image: "assets/mala-black-fungus.png",
         stats: {
             spiciness: 2,
             complexity: 4,
@@ -152,7 +152,7 @@ const MBTICharacters = {
         ],
         quote: "Silent, sharp, and protein-packed.",
         population: "5–6%",
-        image: "🥚",
+        image: "assets/mala-quail-egg.png",
         stats: {
             spiciness: 3,
             complexity: 3,
@@ -171,7 +171,7 @@ const MBTICharacters = {
         ],
         quote: "Soft, sweet, and sliding through spice.",
         population: "4–9%",
-        image: "🍠",
+        image: "assets/mala-sweet-potato-noodles.png",
         stats: {
             spiciness: 3,
             complexity: 3,
@@ -190,7 +190,7 @@ const MBTICharacters = {
         ],
         quote: "Feel deeply, soak fully.",
         population: "4–5%",
-        image: "🫧",
+        image: "assets/mala-beancurd-skin.png",
         stats: {
             spiciness: 2,
             complexity: 4,
@@ -375,7 +375,7 @@ const MBTICharacters = {
 
 // helper function to get image for each type
 function getTypeImage(type) {
-    return MBTICharacters[type]?.image || "❓";
+    return MBTICharacters[type]?.image || "";
 }
 
 export { MBTICharacters, getTypeImage }
