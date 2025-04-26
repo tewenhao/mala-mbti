@@ -209,7 +209,7 @@ const MBTICharacters = {
         ],
         quote: "Strangely perfect. Don’t question it.",
         population: "3–5%",
-        image: "🍖",
+        image: "assets/mala-luncheon-meat.png",
         stats: {
             spiciness: 3,
             complexity: 5,
