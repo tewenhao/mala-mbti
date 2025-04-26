@@ -228,7 +228,7 @@ const MBTICharacters = {
         ],
         quote: "Let’s sizzle, baby.",
         population: "4–5%",
-        image: "🌭",
+        image: "assets/mala-taiwan-sausage.png",
         stats: {
             spiciness: 5,
             complexity: 2,
@@ -247,7 +247,7 @@ const MBTICharacters = {
         ],
         quote: "Crunch first, questions later.",
         population: "8–10%",
-        image: "✨",
+        image: "assets/mala-fried-beancurd-skin.png",
         stats: {
             spiciness: 4,
             complexity: 3,
@@ -266,7 +266,7 @@ const MBTICharacters = {
         ],
         quote: "Chaos is my seasoning.",
         population: "6–8%",
-        image: "🍜",
+        image: "assets/mala-instant-noodles.png",
         stats: {
             spiciness: 4,
             complexity: 4,
@@ -285,7 +285,7 @@ const MBTICharacters = {
         ],
         quote: "Surprise! Bet you weren’t ready.",
         population: "2–5%",
-        image: "🧀",
+        image: "assets/mala-cheese-tofu.png",
         stats: {
             spiciness: 3,
             complexity: 5,
