@@ -304,7 +304,7 @@ const MBTICharacters = {
         ],
         quote: "Keeping this bowl in line.",
         population: "8–10%",
-        image: "🥦",
+        image: "assets/mala-broccoli.png",
         stats: {
             spiciness: 2,
             complexity: 2,
@@ -316,14 +316,14 @@ const MBTICharacters = {
     },
 
     ESFJ: {
-        title: "Friendly Fish Ball",
+        title: "Friendly Fishball",
         traits: [
             "Supportive and Classic",
             "Everyone’s Comfort Ingredient"
         ],
         quote: "Here for everyone. Always.",
         population: "9–13%",
-        image: "🐟",
+        image: "assets/mala-fishball.png",
         stats: {
             spiciness: 2,
             complexity: 2,
@@ -342,7 +342,7 @@ const MBTICharacters = {
         ],
         quote: "Soaking up spice, serving soul.",
         population: "2–5%",
-        image: "🥬",
+        image: "assets/mala-bai-cai.png",
         stats: {
             spiciness: 3,
             complexity: 4,
@@ -361,7 +361,7 @@ const MBTICharacters = {
         ],
         quote: "Lead with heat.",
         population: "2–4%",
-        image: "🥩",
+        image: "assets/mala-beef-slices.png",
         stats: {
             spiciness: 5,
             complexity: 4,
