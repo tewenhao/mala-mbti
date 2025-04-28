@@ -12,7 +12,7 @@ but life being life, we kinda just left this idea aside for a while but it alway
 
 i think it goes without saying that i tried to make it in time for his birthday so i could share the link with him, but as usual i take wayyyyy too long to do things so i exceeded my self-imposed deadline :< but! since i'm already halfway through i might as well finish it right so here's the quiz
 
-you can access the quiz [here]()!
+you can access the quiz [here](https://tewenhao.github.io/mala-mbti/)!
 
 ## credits
 
